@@ -12,12 +12,8 @@
     <meta name="save" content="history" />
     <link rel="Shortcut Icon" href="{% static 'favicon.ico' %} " />
     <!-- load MUI -->
-    <link
-      href="//cdn.muicss.com/mui-0.6.9/css/mui.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="//cdn.muicss.com/mui-0.6.9/js/mui.min.js"></script>
+    <link href="{% static 'mui.min.css' %} " rel="stylesheet" type="text/css" />
+    <script src="{% static 'mui.min.js' %} "></script>
     <script type="text/javascript">
       function keydown_event(key) {
         var a = key;
@@ -344,8 +340,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="right">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="forward_left()"
-              ontouchend="stop()"
+              onmousedown="forward_left()"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ◤
@@ -354,8 +350,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="center">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('forward')"
-              ontouchend="stop()"
+              onmousedown="run_action('forward')"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ▲
@@ -364,8 +360,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="left">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="forward_right()"
-              ontouchend="stop()"
+              onmousedown="forward_right()"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ◥
@@ -374,8 +370,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="right">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="camup_left()"
-              ontouchend="run_action('camready')"
+              onmousedown="camup_left()"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ◸
@@ -384,8 +380,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="center">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('camup')"
-              ontouchend="run_action('camready')"
+              onmousedown="run_action('camup')"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               △
@@ -394,8 +390,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="left">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="camup_right()"
-              ontouchend="run_action('camready')"
+              onmousedown="camup_right()"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ◹
@@ -411,8 +407,8 @@
           >
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('camleft')"
-              ontouchend="run_action('camready')"
+              onmousedown="run_action('camleft')"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ◁
@@ -420,7 +416,7 @@
           </div>
           <!--
           <div class="mui-col-xs-2 mui-col-sm-2", align="center">
-            <button class="mui-btn mui-btn--primary" ontouchstart="run_action('camready')" ontouchend="run_action('camready')">□</button>
+            <button class="mui-btn mui-btn--primary" onmousedown="run_action('camready')" onmouseup="run_action('camready')">□</button>
           </div>
           -->
           <div
@@ -430,8 +426,8 @@
           >
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('camright')"
-              ontouchend="run_action('camready')"
+              onmousedown="run_action('camright')"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ▷
@@ -443,8 +439,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="right">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="backward_left()"
-              ontouchend="stop()"
+              onmousedown="backward_left()"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ◣
@@ -453,8 +449,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="center">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('backward')"
-              ontouchend="stop()"
+              onmousedown="run_action('backward')"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ▼
@@ -463,8 +459,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="left">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="backward_right()"
-              ontouchend="stop()"
+              onmousedown="backward_right()"
+              onmouseup="stop()"
               id="button_opacity"
             >
               ◢
@@ -473,8 +469,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="right">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="camdown_left()"
-              ontouchend="run_action('camready')"
+              onmousedown="camdown_left()"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ◺
@@ -483,8 +479,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="center">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="run_action('camdown')"
-              ontouchend="run_action('camready')"
+              onmousedown="run_action('camdown')"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ▽
@@ -493,8 +489,8 @@
           <div class="mui-col-xs-2 mui-col-sm-2" , align="left">
             <button
               class="mui-btn mui-btn--primary"
-              ontouchstart="camdown_right()"
-              ontouchend="run_action('camready')"
+              onmousedown="camdown_right()"
+              onmouseup="run_action('camready')"
               id="button_opacity"
             >
               ◿
