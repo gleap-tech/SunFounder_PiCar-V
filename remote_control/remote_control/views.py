@@ -106,6 +106,14 @@ def run(request):
 			cam.turn_up(20)
 		elif action == 'camdown':
 			cam.turn_down(20)	
+		elif 'camxturn' in action:
+			print("cam x turn %s" % action)
+			angle = int(action.split(':')[1])
+			cam.turn_right(angle)
+		elif 'camyturn' in action:
+			print("cam y turn %s" % action)
+			angle = int(action.split(':')[1])
+			cam.turn_up(angle)
 	if 'speed' in request.GET:
 		speed = int(request.GET['speed'])
 		if speed < 0:
