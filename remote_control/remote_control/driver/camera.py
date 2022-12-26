@@ -81,6 +81,12 @@ class Camera(object):
 		self.current_tilt = self.safe_plus(self.current_tilt, step)
 		self.tilt_servo.write(self.current_tilt)
 
+	def turn_x(self, angle):
+		self.pan_servo.write(angle)
+
+	def turn_y(self, angle):
+		self.tilt_servo.write(angle)
+
 	def turn_down(self, step=TILT_STEP):
 		'''Control the tilt servo to make the camera turning down'''
 		if self._DEBUG:
